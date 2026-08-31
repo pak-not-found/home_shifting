@@ -1,0 +1,44 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/home", "destination": "/home.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/about-us", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/contact-us", "destination": "/contact.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/blogs", "destination": "/blog.html" },
+    { "source": "/faq", "destination": "/faq.html" },
+    { "source": "/gallary", "destination": "/gallary.html" },
+    { "source": "/gallery", "destination": "/gallary.html" },
+    { "source": "/testimonial", "destination": "/testimonial.html" },
+    { "source": "/testimonials", "destination": "/testimonial.html" },
+    { "source": "/book-service", "destination": "/book-service.html" },
+    { "source": "/appartment-moving", "destination": "/appartment-moving.html" },
+    { "source": "/apartment-moving", "destination": "/appartment-moving.html" },
+    { "source": "/villa-moving", "destination": "/villa-moving.html" },
+    { "source": "/office-moving", "destination": "/office-moving.html" },
+    { "source": "/cargo-moving", "destination": "/cargo-moving.html" },
+    { "source": "/storage-services", "destination": "/storage-services.html" },
+    { "source": "/handyman-services", "destination": "/handyman-services.html" },
+    { "source": "/abu-dhabi-services", "destination": "/abu-dhabi-services.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/terms-and-conditions", "destination": "/terms.html" },
+    { "source": "/privacy", "destination": "/Privacy.html" },
+    { "source": "/Privacy", "destination": "/Privacy.html" },
+    { "source": "/privacy-policy", "destination": "/Privacy.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
