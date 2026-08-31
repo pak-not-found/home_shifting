@@ -1,0 +1,13 @@
+# Ghalib Movers - robots.txt
+# Allow all search engine crawlers
+
+User-agent: *
+Allow: /
+
+# Block unimportant files from crawling
+Disallow: /cdn-cgi/
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Sitemap location (submit this to Google Search Console)
+Sitemap: https://www.ghalibmovers.com/sitemap.xml

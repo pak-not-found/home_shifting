@@ -1,0 +1,287 @@
+/* ============================================
+   Ghalib Movers - Mobile Responsive Fixes
+   +971 52 961 8436 | ghalibmover@gmail.com
+   ============================================ */
+
+/* ---- GLOBAL MOBILE FIXES ---- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---- HERO SECTION MOBILE ---- */
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: 400px;
+    }
+    .hero-content h2.hero-title {
+        font-size: 22px !important;
+        line-height: 1.3 !important;
+    }
+    .hero-content p {
+        font-size: 14px !important;
+    }
+    .hero-btn a.theme-btn {
+        font-size: 13px !important;
+        padding: 10px 16px !important;
+    }
+    .hero-single {
+        background-size: cover !important;
+        background-position: center center !important;
+        min-height: 420px !important;
+    }
+}
+
+/* ---- HEADER MOBILE ---- */
+@media (max-width: 992px) {
+    .navbar-brand img {
+        width: 100px !important;
+    }
+    .header-top {
+        padding: 8px 0;
+    }
+    .navbar {
+        padding: 0 15px;
+    }
+    .mobile-call-bar {
+        display: block;
+        background: #d53816;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+    }
+    .mobile-call-bar a {
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
+@media (min-width: 993px) {
+    .mobile-call-bar {
+        display: none;
+    }
+}
+
+/* ---- SERVICE CARDS MOBILE ---- */
+@media (max-width: 576px) {
+    .service-item {
+        margin-bottom: 20px;
+    }
+    .service-content h3.service-title {
+        font-size: 16px !important;
+    }
+    .service-img img {
+        width: 100% !important;
+        object-fit: cover;
+        height: 180px;
+    }
+    .theme-btn {
+        font-size: 13px !important;
+        padding: 8px 14px !important;
+        margin: 3px 2px !important;
+        display: inline-block !important;
+    }
+}
+
+/* ---- ABOUT SECTION MOBILE ---- */
+@media (max-width: 767px) {
+    .about-area {
+        padding: 50px 15px !important;
+    }
+    .about-left {
+        margin-bottom: 30px;
+    }
+    .about-img img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    .about-text {
+        font-size: 14px !important;
+    }
+    .about-call {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* ---- FEATURE SECTION ---- */
+@media (max-width: 576px) {
+    .feature-item {
+        padding: 20px 10px;
+        margin-bottom: 15px;
+    }
+    .feature-title {
+        font-size: 14px !important;
+    }
+}
+
+/* ---- FOOTER MOBILE ---- */
+@media (max-width: 767px) {
+    .footer-widget-wrapper {
+        padding-bottom: 80px !important; /* space for mobile call bar */
+    }
+    .footer-widget-box {
+        margin-bottom: 25px;
+    }
+    .copyright {
+        padding-bottom: 60px !important;
+    }
+    .footer-logo img {
+        max-width: 80px;
+    }
+}
+
+/* ---- CTA SECTION MOBILE ---- */
+@media (max-width: 767px) {
+    .cta-text h1 {
+        font-size: 24px !important;
+        line-height: 1.3;
+    }
+    .cta-text p {
+        font-size: 13px;
+    }
+}
+
+/* ---- BREADCRUMB MOBILE ---- */
+@media (max-width: 576px) {
+    .breadcrumb-title {
+        font-size: 24px !important;
+    }
+    .site-breadcrumb {
+        padding: 40px 0 30px !important;
+    }
+}
+
+/* ---- BLOG CARDS MOBILE ---- */
+@media (max-width: 576px) {
+    .blog-item {
+        margin-bottom: 25px;
+    }
+    .blog-title a {
+        font-size: 15px !important;
+    }
+    .blog-item-img img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+/* ---- CONTACT FORM MOBILE ---- */
+@media (max-width: 767px) {
+    .contact-content {
+        margin-bottom: 30px;
+    }
+    .contact-info {
+        padding: 15px;
+    }
+    .contact-form {
+        padding: 20px 15px !important;
+    }
+}
+
+/* ---- FAQ MOBILE ---- */
+@media (max-width: 767px) {
+    .accordion-button {
+        font-size: 14px !important;
+        padding: 12px 15px !important;
+    }
+}
+
+/* ---- TESTIMONIAL MOBILE ---- */
+@media (max-width: 576px) {
+    .testimonial-quote p {
+        font-size: 13px !important;
+    }
+    .testimonial-item {
+        padding: 20px !important;
+    }
+}
+
+/* ---- NAV DROPDOWN MOBILE FIX ---- */
+@media (max-width: 992px) {
+    .dropdown-menu {
+        border: none;
+        background: #f5f5f5;
+        padding: 5px 15px;
+    }
+    .dropdown-item {
+        padding: 8px 5px;
+        font-size: 14px;
+    }
+    .navbar-collapse {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}
+
+/* ---- WHATSAPP BUTTON MOBILE ---- */
+@media (max-width: 767px) {
+    .wa-btn-float {
+        bottom: 65px !important; /* above mobile call bar */
+    }
+}
+
+/* ---- TOUCH TARGETS (min 44px for accessibility) ---- */
+@media (max-width: 767px) {
+    a, button, .nav-link, .dropdown-item {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    .nav-link {
+        padding: 12px 10px !important;
+    }
+}
+
+/* ---- PERFORMANCE: Reduce animations on mobile ---- */
+@media (max-width: 767px) {
+    .wow {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
+}
+
+/* ---- GALLERY MOBILE ---- */
+@media (max-width: 576px) {
+    .gallery-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+}
+
+/* ---- COUNTER MOBILE ---- */
+@media (max-width: 576px) {
+    .counter-box {
+        text-align: center;
+        padding: 20px 10px;
+    }
+    .counter {
+        font-size: 28px !important;
+    }
+}
+
+/* ---- CHOOSE SECTION MOBILE ---- */
+@media (max-width: 767px) {
+    .choose-item {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+}
