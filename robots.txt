@@ -10,4 +10,4 @@ Disallow: /assets/js/
 Disallow: /assets/css/
 
 # Sitemap location (submit this to Google Search Console)
-Sitemap: https://www.ghalibmovers.com/sitemap.xml
+Sitemap: https://ghalibmovers.com/sitemap.xml
