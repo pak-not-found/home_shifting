@@ -4,8 +4,8 @@
   "rewrites": [
     { "source": "/", "destination": "//" },
     { "source": "/home", "destination": "/home.html" },
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/about-us", "destination": "/about.html" },
+    { "source": "/about", "destination": "//about" },
+    { "source": "/about-us", "destination": "//about" },
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/contact-us", "destination": "/contact.html" },
     { "source": "/blog", "destination": "/blog.html" },
