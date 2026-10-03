@@ -9,6 +9,16 @@ Version         : 1.0
 (function ($) {
     "use strict";
 
+    /* =====================================================
+       SVG ARROWS (replacing FontAwesome icons)
+       ===================================================== */
+
+    // Arrow Left SVG (your provided)
+    var arrowLeftSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="22" height="22" aria-hidden="true" style="fill: currentColor; vertical-align: middle;"><path d="M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z"/></svg>';
+
+    // Arrow Right SVG (mirrored)
+    var arrowRightSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="22" height="22" aria-hidden="true" style="fill: currentColor; vertical-align: middle;"><path d="M566.6 342.7C579.1 330.2 579.1 309.9 566.6 297.4L406.6 137.4C394.1 124.9 373.8 124.9 361.3 137.4C348.8 149.9 348.8 170.2 361.3 182.7L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"/></svg>';
+
 
     // multi level dropdown menu
     $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
@@ -36,7 +46,6 @@ Version         : 1.0
     }
 
 
-
     // data-background    
     $(document).on('ready', function () {
         $("[data-background]").each(function () {
@@ -60,40 +69,40 @@ Version         : 1.0
         autoplayTimeout: 5000,
         items: 1,
         navText: [
-            "<i class='far fa-long-arrow-left'></i>",
-            "<i class='far fa-long-arrow-right'></i>"
+            arrowLeftSvg,
+            arrowRightSvg
         ],
 
         onInitialized: function(event) {
-        var $firstAnimatingElements = $('.owl-item').eq(event.item.index).find("[data-animation]");
-        doAnimations($firstAnimatingElements);
+            var $firstAnimatingElements = $('.owl-item').eq(event.item.index).find("[data-animation]");
+            doAnimations($firstAnimatingElements);
         },
 
         onChanged: function(event){
-        var $firstAnimatingElements = $('.owl-item').eq(event.item.index).find("[data-animation]");
-        doAnimations($firstAnimatingElements);
+            var $firstAnimatingElements = $('.owl-item').eq(event.item.index).find("[data-animation]");
+            doAnimations($firstAnimatingElements);
         }
     });
 
     //hero slider do animations
     function doAnimations(elements) {
-		var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-		elements.each(function () {
-			var $this = $(this);
-			var $animationDelay = $this.data('delay');
-			var $animationDuration = $this.data('duration');
-			var $animationType = 'animated ' + $this.data('animation');
-			$this.css({
-				'animation-delay': $animationDelay,
-				'-webkit-animation-delay': $animationDelay,
+        var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        elements.each(function () {
+            var $this = $(this);
+            var $animationDelay = $this.data('delay');
+            var $animationDuration = $this.data('duration');
+            var $animationType = 'animated ' + $this.data('animation');
+            $this.css({
+                'animation-delay': $animationDelay,
+                '-webkit-animation-delay': $animationDelay,
                 'animation-duration': $animationDuration,
                 '-webkit-animation-duration': $animationDuration,
-			});
-			$this.addClass($animationType).one(animationEndEvents, function () {
-				$this.removeClass($animationType);
-			});
-		});
-	}
+            });
+            $this.addClass($animationType).one(animationEndEvents, function () {
+                $this.removeClass($animationType);
+            });
+        });
+    }
 
 
     // partner-slider
@@ -145,8 +154,8 @@ Version         : 1.0
         nav: false,
         dots: true,
         navText: [
-            "<i class='fal fa-long-arrow-left'></i>",
-            "<i class='fal fa-long-arrow-right'></i>"
+            arrowLeftSvg,
+            arrowRightSvg
         ],
         autoplay: true,
         responsive: {
@@ -170,8 +179,8 @@ Version         : 1.0
         nav: false,
         dots: true,
         navText: [
-            "<i class='fal fa-long-arrow-left'></i>",
-            "<i class='fal fa-long-arrow-right'></i>"
+            arrowLeftSvg,
+            arrowRightSvg
         ],
         autoplay: true,
         responsive: {
@@ -208,15 +217,15 @@ Version         : 1.0
     $(document).ready(function(){
         var progressBar = $('.progress');
         if(progressBar.length) {
-        progressBar.each(function () {
-            var Self = $(this);
-            Self.appear(function () {
-            var progressValue = Self.data('value');
-            Self.find('.progress-bar').animate({
-                width:progressValue+'%'           
-            }, 1000);
+            progressBar.each(function () {
+                var Self = $(this);
+                Self.appear(function () {
+                    var progressValue = Self.data('value');
+                    Self.find('.progress-bar').animate({
+                        width:progressValue+'%'           
+                    }, 1000);
+                });
             });
-        })
         }
     });
 
@@ -304,13 +313,3 @@ Version         : 1.0
 
 
 })(jQuery);
-
-
-
-
-
-
-
-
-
-
